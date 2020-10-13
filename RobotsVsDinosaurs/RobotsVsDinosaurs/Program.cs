@@ -41,11 +41,7 @@ namespace RobotsVsDinosaurs
             //    }
             //}
             Battlefield battlefield = new Battlefield();
-            battlefield.runGame();
-
-           
-           
-            
+            battlefield.runGame(); 
             Console.ReadLine();
         }
     }

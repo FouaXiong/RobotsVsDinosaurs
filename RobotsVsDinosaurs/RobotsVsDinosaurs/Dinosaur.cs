@@ -28,6 +28,7 @@ namespace RobotsVsDinosaurs
         {
             // What do we need to have happen when attacking a robot?
             //Reduce robot health
+            Console.WriteLine($"{dinosaurType} is attacking {robot.robotName} for {attackPower}");
             robot.health -= attackPower;
             return checkIfRobotDied(robot);
         }

@@ -22,6 +22,10 @@ namespace RobotsVsDinosaurs
             Weapon weapon = new Weapon("Laser", 25);
             Robot robot = new Robot(weapon, "Laz0r", 100, 50); //Instantiating
             robots.Add(robot);
+            Robot robot2 = new Robot(weapon, "L4zer", 120, 45);
+            robots.Add(robot2);
+            Robot robot3 = new Robot(weapon, "P-Shooter", 90, 55);
+            robots.Add(robot3);
         }
         
         public void createFleet(int number)

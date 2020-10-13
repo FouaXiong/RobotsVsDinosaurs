@@ -25,6 +25,10 @@ namespace RobotsVsDinosaurs
         {
             Dinosaur dinosaur = new Dinosaur("Velocidrome", 100, 50, 20); //Instantiating
             dinosaurs.Add(dinosaur);
+            Dinosaur dinosaur2 = new Dinosaur("Gendrome", 100, 25, 30);
+            dinosaurs.Add(dinosaur2);
+            Dinosaur dinosaur3 = new Dinosaur("Iodrome", 150, 20, 15);
+            dinosaurs.Add(dinosaur3);
         }
 
         public void createHerd(int number)

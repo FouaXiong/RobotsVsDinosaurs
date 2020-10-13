@@ -15,19 +15,34 @@ namespace RobotsVsDinosaurs
 
         public Battlefield()
         {
-            fleet = new Fleet(2);
-            herd = new Herd(3);
+            fleet = new Fleet(1);
+            herd = new Herd(1);
         }
 
         // Run Game method
         public void runGame()
         {
-            while (true)
+            while (fleet.robots.Count > 0 && 0 < herd.dinosaurs.Count)
             {
                 fleet.herdAttacks(herd.dinosaurs);
-
+                Console.WriteLine("Fleet");
+                herd.fleetAttacks(fleet.robots);
+                Console.WriteLine("Herd");
             }
+            winningSide();
         }
         //Declare winner method
+        public void winningSide()
+        {
+            if (fleet.robots.Count > herd.dinosaurs.Count)
+            {
+                Console.WriteLine("Fleet has won!");
+            }
+            else
+            {
+                Console.WriteLine("Herd has won!");
+            }
+        
+        }
     }
 }

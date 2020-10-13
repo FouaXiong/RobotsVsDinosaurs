@@ -25,7 +25,8 @@ namespace RobotsVsDinosaurs
 
         public bool attack(Dinosaur dinosaur)
         {
-            dinosaur.health -= powerLevel;
+            Console.WriteLine(robotName + " attacks " + dinosaur.dinosaurType + " for " + laser.attackPower);
+            dinosaur.health -= laser.attackPower;
             Console.WriteLine(dinosaur.health);
             return checkIfDinosaurDied(dinosaur);
         }
