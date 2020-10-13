@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,5 +41,38 @@ namespace RobotsVsDinosaurs
         //Method to make dinosaur attack.
             // USE FOR/EACH
             //Pass in a Fleet.
+    
+        public void fleetAttacks(List<Robot> robot)
+        {
+            int count = 0;
+            count = GetLowCount(robot);
+            for (int i = 0; i < count; i++)
+            {
+                bool death;
+                death = this.dinosaurs[i].attack(robot[i]);
+                Console.WriteLine(death);
+                if (death)
+                {
+                    robot.Remove(robot[i]);
+                    count = GetLowCount(robot);
+                }
+            }
+            
+        }
+        public int GetLowCount(List<Robot> robot)
+        {
+            if(robot.Count > dinosaurs.Count)
+            {
+                return dinosaurs.Count;
+            }
+            else
+            {
+                return robot.Count;
+            }
+        
+        }
+    
+    
+    
     }
 }

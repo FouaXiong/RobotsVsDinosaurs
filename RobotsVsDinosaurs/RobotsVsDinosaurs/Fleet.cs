@@ -48,7 +48,7 @@ namespace RobotsVsDinosaurs
                 if (death)
                 {
                     dinosaur.Remove(dinosaur[i]);
-                    //count = GetLowCount(dinosaur);
+                    count = GetLowCount(dinosaur);
                 }
                 
             }
